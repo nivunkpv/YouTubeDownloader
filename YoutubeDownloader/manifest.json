@@ -1,0 +1,28 @@
+{
+  "manifest_version": 2,
+  "name": "Youtube Downloader",
+  "version": "0.1",
+  
+  "content_scripts": 
+   [
+	{
+		"matches": [
+			"https://www.youtube.com/*"
+		],
+		"js": ["content.js"]
+	}
+  ],
+  "browser_action": 
+  {
+	"default_icon": "icon.png",
+	"popup": "pop.html"
+  },
+  "background": {
+  "scripts": ["background.js"]
+},
+"permissions": [
+    "tabs",
+    "http://127.0.0.1:5000/*"
+	
+]
+}
